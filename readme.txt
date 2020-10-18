@@ -1,0 +1,2 @@
+This is a simple python program to block the websites you want to boost your productivity during your work hours.
+To run this program you need to give it admin privilages and on windows you can use task scheduler to run this at startup. 
