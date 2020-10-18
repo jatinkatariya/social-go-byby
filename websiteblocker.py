@@ -1,9 +1,11 @@
-import time
+import time, getopt, sys
 from datetime import datetime as dt
 hosts_temp = "hosts"
 hosts_path = r"C:\Windows\System32\drivers\etc\hosts"
 redirect="12.0.0.1"
-websitelist = ["www.facebook.com","facebook.com"]
+
+argumentList = sys.argv[1:]
+websitelist = map(lambda s: 'www.'+s+'.com',argumentList)
 #countseconds = 0
 while True:
     #countseconds+=1
@@ -26,5 +28,6 @@ while True:
                     file.write(line)
             file.truncate()
         print("Productive Hours")
+        print('Following website have been blocked:',','.join(websitelist))
     #print(1)
     time.sleep(5)
